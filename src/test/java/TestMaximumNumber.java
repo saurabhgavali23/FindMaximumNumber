@@ -9,7 +9,7 @@ public class TestMaximumNumber {
     public void whenGivenFirstNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        int maxNo = maximumNumber.findMaxNoForInteger(400, 200, 100);
+        int maxNo = maximumNumber.findMaxValue(400, 200, 100);
         Assert.assertEquals(400, maxNo);
     }
 
@@ -17,7 +17,7 @@ public class TestMaximumNumber {
     public void whenGivenSecondNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        int maxNo = maximumNumber.findMaxNoForInteger(100, 300, 150);
+        int maxNo = maximumNumber.findMaxValue(100, 300, 150);
         Assert.assertEquals(300, maxNo);
     }
 
@@ -25,7 +25,7 @@ public class TestMaximumNumber {
     public void whenGivenThirdNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        int maxNo = maximumNumber.findMaxNoForInteger(400, 200, 500);
+        int maxNo = maximumNumber.findMaxValue(400, 200, 500);
         Assert.assertEquals(500, maxNo);
     }
 
@@ -35,7 +35,7 @@ public class TestMaximumNumber {
     public void whenGivenFirstFloatNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        float maxNo = maximumNumber.findMaxNoForFloat(400.0f, 200.0f, 100.0f);
+        float maxNo = maximumNumber.findMaxValue(400.0f, 200.0f, 100.0f);
         Assert.assertEquals(400.0, maxNo,0.0);
     }
 
@@ -43,7 +43,7 @@ public class TestMaximumNumber {
     public void whenGivenSecondFloatNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        float maxNo = maximumNumber.findMaxNoForFloat(100.0f, 300.0f, 150.0f);
+        float maxNo = maximumNumber.findMaxValue(100.0f, 300.0f, 150.0f);
         Assert.assertEquals(300.0, maxNo,0.0);
     }
 
@@ -51,7 +51,7 @@ public class TestMaximumNumber {
     public void whenGivenThirdFloatNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        float maxNo = maximumNumber.findMaxNoForFloat(400.0f, 200.0f, 500.0f);
+        float maxNo = maximumNumber.findMaxValue(400.0f, 200.0f, 500.0f);
         Assert.assertEquals(500.0, maxNo,0.0);
     }
 
@@ -61,7 +61,7 @@ public class TestMaximumNumber {
     public void whenGivenFirstString_IfItsMax_ShouldReturnSameString() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        String maxString = maximumNumber.findMaxString("Peach","Apple","Banana");
+        String maxString = maximumNumber.findMaxValue("Peach","Apple","Banana");
         Assert.assertEquals("Peach",maxString);
     }
 
@@ -69,7 +69,7 @@ public class TestMaximumNumber {
     public void whenGivenSecondString_IfItsMax_ShouldReturnSameString() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        String maxString = maximumNumber.findMaxString("Apple","Peach","Banana");
+        String maxString = maximumNumber.findMaxValue("Apple","Peach","Banana");
         Assert.assertEquals("Peach",maxString);
     }
 
@@ -77,7 +77,7 @@ public class TestMaximumNumber {
     public void whenGivenThirdString_IfItsMax_ShouldReturnSameString() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        String maxString = maximumNumber.findMaxString("Banana","Apple","Peach");
+        String maxString = maximumNumber.findMaxValue("Banana","Apple","Peach");
         Assert.assertEquals("Peach",maxString);
     }
 }
