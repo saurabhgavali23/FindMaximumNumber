@@ -1,31 +1,33 @@
 package com.bridgelabz;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class MaximumNumber <T extends Comparable> {
 
-    T x,y,z;
+    T[] x;
 
     public MaximumNumber(){}
-    public MaximumNumber(T x, T y, T z) {
+    public MaximumNumber(T... x) {
         this.x = x;
-        this.y = y;
-        this.z = z;
     }
 
     public T testMaximum(){
 
-        return findMaxValue(x,y,z);
+        return findMaxValue(x);
     }
 
-    public static  <T extends Comparable> T findMaxValue(T x, T y, T z){
+    public static  <T extends Comparable> T findMaxValue(T... x){
 
-        T max = x;
+        /*T max = x;
 
         if (y.compareTo(max) > 0)
             max = y;
 
         if (z.compareTo(max) > 0)
-            max = z;
+            max = z;*/
 
-        return max;
+        Arrays.sort(x , Collections.reverseOrder());
+        return x[0];
     }
 }
