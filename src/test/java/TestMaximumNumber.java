@@ -80,4 +80,79 @@ public class TestMaximumNumber {
         String maxString = maximumNumber.findMaxValue("Banana","Apple","Peach");
         Assert.assertEquals("Peach",maxString);
     }
+
+    // Test Cases For Generic Type Integer
+    @Test
+    public void whenGivenFirstIntegerNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(40,20,30);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(40,comparable);
+    }
+
+    @Test
+    public void whenGivenSecondIntegerNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(20,40,30);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(40,comparable);
+    }
+
+    @Test
+    public void whenGivenThirdIntegerNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(20,30,40);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(40,comparable);
+    }
+
+    //Test Cases For Generic Type Float
+    @Test
+    public void whenGivenFristFloatNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(40.0f,20.0f,30.0f);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(40.0f,comparable);
+    }
+
+    @Test
+    public void whenGivenSecondFloatNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(20.0f,40.0f,30.0f);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(40.0f,comparable);
+    }
+
+    @Test
+    public void whenGivenThirdFloatNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(30.0f,20.0f,40.0f);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(40.0f,comparable);
+    }
+
+    //Test Cases For Generic Type String
+    @Test
+    public void whenGivenFirstString_IfItsMax_ShouldReturnSameSring() {
+
+        MaximumNumber maximumNumber = new MaximumNumber("Peach","Apple","Banana");
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals("Peach",comparable);
+    }
+
+    @Test
+    public void whenGivenSecondString_IfItsMax_ShouldReturnSameSring() {
+
+        MaximumNumber maximumNumber = new MaximumNumber("Apple","Peach","Banana");
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals("Peach",comparable);
+    }
+
+    @Test
+    public void whenGivenThirdString_IfItsMax_ShouldReturnSameSring() {
+
+        MaximumNumber maximumNumber = new MaximumNumber("Banana","Apple","Peach");
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals("Peach",comparable);
+    }
 }

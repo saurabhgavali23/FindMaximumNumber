@@ -1,6 +1,20 @@
 package com.bridgelabz;
 
-public class MaximumNumber {
+public class MaximumNumber <T extends Comparable> {
+
+    T x,y,z;
+
+    public MaximumNumber(){}
+    public MaximumNumber(T x, T y, T z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    public T testMaximum(){
+
+        return findMaxValue(x,y,z);
+    }
 
     public static  <T extends Comparable> T findMaxValue(T x, T y, T z){
 
