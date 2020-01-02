@@ -9,7 +9,7 @@ public class TestMaximumNumber {
     public void whenGivenFirstNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        int maxNo = maximumNumber.findMaxNo(400, 200, 100);
+        int maxNo = maximumNumber.findMaxNoForInteger(400, 200, 100);
         Assert.assertEquals(400, maxNo);
     }
 
@@ -17,7 +17,7 @@ public class TestMaximumNumber {
     public void whenGivenSecondNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        int maxNo = maximumNumber.findMaxNo(100, 300, 150);
+        int maxNo = maximumNumber.findMaxNoForInteger(100, 300, 150);
         Assert.assertEquals(300, maxNo);
     }
 
@@ -25,7 +25,7 @@ public class TestMaximumNumber {
     public void whenGivenThirdNumber_IfItsMax_ShouldReturnSameNo() {
 
         MaximumNumber maximumNumber = new MaximumNumber();
-        int maxNo = maximumNumber.findMaxNo(400, 200, 500);
+        int maxNo = maximumNumber.findMaxNoForInteger(400, 200, 500);
         Assert.assertEquals(500, maxNo);
     }
 
@@ -53,5 +53,31 @@ public class TestMaximumNumber {
         MaximumNumber maximumNumber = new MaximumNumber();
         float maxNo = maximumNumber.findMaxNoForFloat(400.0f, 200.0f, 500.0f);
         Assert.assertEquals(500.0, maxNo,0.0);
+    }
+
+
+    // Test Cases For String
+    @Test
+    public void whenGivenFirstString_IfItsMax_ShouldReturnSameString() {
+
+        MaximumNumber maximumNumber = new MaximumNumber();
+        String maxString = maximumNumber.findMaxString("Peach","Apple","Banana");
+        Assert.assertEquals("Peach",maxString);
+    }
+
+    @Test
+    public void whenGivenSecondString_IfItsMax_ShouldReturnSameString() {
+
+        MaximumNumber maximumNumber = new MaximumNumber();
+        String maxString = maximumNumber.findMaxString("Apple","Peach","Banana");
+        Assert.assertEquals("Peach",maxString);
+    }
+
+    @Test
+    public void whenGivenThirdString_IfItsMax_ShouldReturnSameString() {
+
+        MaximumNumber maximumNumber = new MaximumNumber();
+        String maxString = maximumNumber.findMaxString("Banana","Apple","Peach");
+        Assert.assertEquals("Peach",maxString);
     }
 }
