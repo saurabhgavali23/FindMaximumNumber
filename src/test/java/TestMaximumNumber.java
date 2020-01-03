@@ -155,4 +155,29 @@ public class TestMaximumNumber {
         Comparable comparable = maximumNumber.testMaximum();
         Assert.assertEquals("Peach",comparable);
     }
+
+    // Test Case For Multiple Arguments
+    @Test
+    public void whenGivenMultipleIntegerNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(30,20,40,50,60);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(60,comparable);
+    }
+
+    @Test
+    public void whenGivenMultipleFloatNo_IfItsMax_ShouldReturnSameNo() {
+
+        MaximumNumber maximumNumber = new MaximumNumber(70.0f,20.0f,40.0f,50.0f,30.0f);
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(70.0f,comparable);
+    }
+
+    @Test
+    public void whenGivenMultipleString_IfItsMax_ShouldReturnSameSring() {
+
+        MaximumNumber maximumNumber = new MaximumNumber("Banana","Apple","Peach","Mango","Orange");
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals("Peach",comparable);
+    }
 }
